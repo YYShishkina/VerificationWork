@@ -1,11 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.Write("Input array length --> ");
 int lengthArrray = int.Parse(Console.ReadLine()!);
+Console.WriteLine();
 string[] arrayWords = new string [lengthArrray];
 arrayWords=CreateArray(arrayWords);
+Console.WriteLine($"Array before sorting");
 PrintArray(arrayWords);
 Console.WriteLine();
 arrayWords=SortArray(arrayWords);
+Console.WriteLine($"Array after sorting");
 PrintArray(arrayWords);
 Console.WriteLine();
 
@@ -13,8 +16,10 @@ string[] CreateArray(string[] strArray)
 {
     for(int i=0; i<strArray.Length; i++)
     {
+        Console.Write($"Input {i} element of Arrya ");
         strArray[i]= Console.ReadLine();
     }
+    Console.WriteLine();
     return strArray;
 }
 
@@ -24,6 +29,7 @@ void PrintArray (string[] strArray)
     {
         Console.Write($"{strArray[i]} ");
     }
+    Console.WriteLine();
 }
 
 string[] SortArray(string[] strArray)
